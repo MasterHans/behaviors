@@ -18,22 +18,23 @@
 
 Как вариант можно использовать трейты
 
-trait FileTrait 
-{
-    public function beforeSave($insert) 
+
+    trait FileTrait 
     {
-        if (parent::beforeSave($insert)){
+        public function beforeSave($insert) 
+        {
+            if (parent::beforeSave($insert)){
+            }
+        }
+        
+        public function getFileUrl()
+        {
+        }
+    
+        public function getFilePath()
+        {
         }
     }
-    
-    public function getFileUrl()
-    {
-    }
-
-    public function getFilePath()
-    {
-    }
-}
 
 
 Но проблема в том что трейты создаются статически на этапе компиляции,
